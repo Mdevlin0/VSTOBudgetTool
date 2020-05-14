@@ -36,14 +36,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RibbonBudgetTab));
             this.BudgetTab = this.Factory.CreateRibbonTab();
-            this.group1 = this.Factory.CreateRibbonGroup();
             this.ExportGroup = this.Factory.CreateRibbonGroup();
+            this.btnSaveEstimateToDatabase = this.Factory.CreateRibbonButton();
+            this.group1 = this.Factory.CreateRibbonGroup();
             this.btnImportFieldReport = this.Factory.CreateRibbonButton();
             this.btnSaveCompletedReport = this.Factory.CreateRibbonButton();
-            this.btnSaveEstimateToDatabase = this.Factory.CreateRibbonButton();
             this.BudgetTab.SuspendLayout();
-            this.group1.SuspendLayout();
             this.ExportGroup.SuspendLayout();
+            this.group1.SuspendLayout();
             this.SuspendLayout();
             // 
             // BudgetTab
@@ -53,18 +53,27 @@
             this.BudgetTab.Label = "Budget";
             this.BudgetTab.Name = "BudgetTab";
             // 
+            // ExportGroup
+            // 
+            this.ExportGroup.Items.Add(this.btnSaveEstimateToDatabase);
+            this.ExportGroup.Label = "Estimate";
+            this.ExportGroup.Name = "ExportGroup";
+            // 
+            // btnSaveEstimateToDatabase
+            // 
+            this.btnSaveEstimateToDatabase.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
+            this.btnSaveEstimateToDatabase.Image = ((System.Drawing.Image)(resources.GetObject("btnSaveEstimateToDatabase.Image")));
+            this.btnSaveEstimateToDatabase.Label = "Save Estimate";
+            this.btnSaveEstimateToDatabase.Name = "btnSaveEstimateToDatabase";
+            this.btnSaveEstimateToDatabase.ShowImage = true;
+            this.btnSaveEstimateToDatabase.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.btnSaveEstimateToDatabase_Click);
+            // 
             // group1
             // 
             this.group1.Items.Add(this.btnImportFieldReport);
             this.group1.Items.Add(this.btnSaveCompletedReport);
             this.group1.Label = "Report";
             this.group1.Name = "group1";
-            // 
-            // ExportGroup
-            // 
-            this.ExportGroup.Items.Add(this.btnSaveEstimateToDatabase);
-            this.ExportGroup.Label = "Estimate";
-            this.ExportGroup.Name = "ExportGroup";
             // 
             // btnImportFieldReport
             // 
@@ -83,15 +92,6 @@
             this.btnSaveCompletedReport.ShowImage = true;
             this.btnSaveCompletedReport.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.btnSaveCompletedReport_Click);
             // 
-            // btnSaveEstimateToDatabase
-            // 
-            this.btnSaveEstimateToDatabase.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
-            this.btnSaveEstimateToDatabase.Image = ((System.Drawing.Image)(resources.GetObject("btnSaveEstimateToDatabase.Image")));
-            this.btnSaveEstimateToDatabase.Label = "Save Estimate";
-            this.btnSaveEstimateToDatabase.Name = "btnSaveEstimateToDatabase";
-            this.btnSaveEstimateToDatabase.ShowImage = true;
-            this.btnSaveEstimateToDatabase.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.btnSaveEstimateToDatabase_Click);
-            // 
             // RibbonBudgetTab
             // 
             this.Name = "RibbonBudgetTab";
@@ -100,10 +100,10 @@
             this.Load += new Microsoft.Office.Tools.Ribbon.RibbonUIEventHandler(this.RibbonBudgetTab_Load);
             this.BudgetTab.ResumeLayout(false);
             this.BudgetTab.PerformLayout();
-            this.group1.ResumeLayout(false);
-            this.group1.PerformLayout();
             this.ExportGroup.ResumeLayout(false);
             this.ExportGroup.PerformLayout();
+            this.group1.ResumeLayout(false);
+            this.group1.PerformLayout();
             this.ResumeLayout(false);
 
         }
