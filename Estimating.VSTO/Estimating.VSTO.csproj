@@ -168,6 +168,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RibbonBudgetTab.resx">
+      <DependentUpon>RibbonBudgetTab.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Documentation\Use Cases of the Budget Tracking Tool.docx" />
     <None Include="Documentation\VSTOBudgetTracker.pdf" />
     <None Include="Estimating.VSTO_TemporaryKey.pfx" />
@@ -178,6 +181,12 @@
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="RibbonBudgetTab.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RibbonBudgetTab.Designer.cs">
+      <DependentUpon>RibbonBudgetTab.cs</DependentUpon>
     </Compile>
     <Compile Include="ThisAddIn.cs">
       <SubType>Code</SubType>

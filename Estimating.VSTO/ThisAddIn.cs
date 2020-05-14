@@ -19,6 +19,12 @@ namespace Estimating.VSTO
         {
         }
 
+        public Excel.Worksheet GetActiveWorkSheet()
+        {
+            return (Excel.Worksheet)Application.ActiveSheet;
+        }
+
+
         #region VSTO generated code
 
         /// <summary>
