@@ -219,7 +219,7 @@
     <ManifestKeyFile>Estimating.VSTO_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>D4B05E79685515266D3A9E4047B5EBB0FDBE6527</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>D4DD99548CD7B368D089D236D6C29B3E91F063CD</ManifestCertificateThumbprint>
   </PropertyGroup>
   <!-- Include the build rules for a C# project. -->
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
